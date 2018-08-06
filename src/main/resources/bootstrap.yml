@@ -1,0 +1,10 @@
+## YAML Template.
+---
+spring:
+  application:
+    name: msestudiante
+
+
+  cloud:
+    config:
+      uri: http://localhost:5010
