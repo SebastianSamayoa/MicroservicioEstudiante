@@ -3,8 +3,8 @@
 spring:
   application:
     name: msestudiante
-
-
   cloud:
     config:
       uri: http://localhost:5010
+server:
+  port: 5011

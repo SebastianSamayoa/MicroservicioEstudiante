@@ -4,17 +4,16 @@ import com.msestudiante.Entidades.ApEstudiante;
 import com.msestudiante.Repositorios.RepositorioEstudiante;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  *
  * @author root
  */
+@CrossOrigin
 @RestController
 @RequestMapping("estudiante")
 @EnableJpaRepositories(basePackages = "com.msestudiante.Repositorios")
@@ -22,6 +21,8 @@ public class ControladorEstudiante {
     
     @Autowired
     RepositorioEstudiante Estudiantes;
+
+
 
     @RequestMapping(
             value = "/all",
@@ -32,6 +33,7 @@ public class ControladorEstudiante {
         List<ApEstudiante> result = (List<ApEstudiante>) Estudiantes.findAll();
         return result;
     }
+
 
     @RequestMapping(
             value = "/crearestudiante",
@@ -46,5 +48,6 @@ public class ControladorEstudiante {
             return null;
         }
     }
-    
+
+
 }
