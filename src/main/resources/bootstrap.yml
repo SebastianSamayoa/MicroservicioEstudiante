@@ -5,6 +5,6 @@ spring:
     name: msestudiante
   cloud:
     config:
-      uri: http://localhost:5010
+      uri: http://192.168.204.136:5010
 server:
   port: 5011
